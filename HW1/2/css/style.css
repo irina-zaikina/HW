@@ -1,0 +1,39 @@
+* {
+    margin: 0
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  div {
+    height: 33.3%;
+  }
+  .one {
+    background: red;
+    width: 220px;
+    height: 200px;
+  }
+  .two {
+    background: #18ec18;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 220px;
+    height: 220px;
+  }
+  .three {
+    background: blue;
+
+    position:relative;
+    width: 220px;
+    height: 200px;
+    left: 180px;
+    top: 0px;
+  }
+
+  .backg{
+    border:solid;  
+    width: 400px;
+    height: 400px;
+    background: #fafcfa;
+  }
