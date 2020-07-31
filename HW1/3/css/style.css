@@ -26,7 +26,6 @@ body {
 
 }
 
-
 .sidebar {
     background-color: rgba(75, 253, 21, 0.5);
     width: 10%;
@@ -57,6 +56,6 @@ body {
     background: #00BFFF;
     text-align: center;
     margin: 0% 5% 0% 5%;
-
+    border-radius: 10px 10px 0 0;
     
 }
