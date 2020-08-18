@@ -1,4 +1,4 @@
-var user = prompt("Enter User Name", "Yauheni");
+var user = prompt("Enter User Name", "Irina Zaikina");
 var res = "";
 
 if (/\d/.test(user)) 
