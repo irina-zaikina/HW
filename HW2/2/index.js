@@ -6,10 +6,11 @@ oClear.addEventListener('click', fClickClear);
 
 function fClickBack(){
   console.log('Click on Back');
-  window.location.href='../index.html';    
+
+  window.open('https://www.tut.by', '_blanc');
 }
 
 function fClickClear(){
-  console.log('Click on Clear');
-  document.body.innerHTML = '';
+  console.log('Click on Clear Text');
+  document.body.innerHTML="";
 }
