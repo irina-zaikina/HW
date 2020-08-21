@@ -7,7 +7,7 @@ oClear.addEventListener('click', fClickClear);
 function fClickBack(){
   console.log('Click on Back');
 
-  window.open('https://www.tut.by', '_blanc');
+  window.open('https://www.onliner.by', '_blanc');
 }
 
 function fClickClear(){
