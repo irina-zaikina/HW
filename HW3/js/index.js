@@ -36,11 +36,10 @@ function Working(name, firstname, age, specialty, experience, salary, gender, pl
     this.setPosition = function (value) {
         position = value;
     }
-    
+} 
     function WorkTransport (name, firstname, age, specialty, experience, salary, gender, place, type)
      {  
-        Working.apply(this,[name, firstname, age, specialty, experience, 
-        salary, gender, place]); 
+        Working.apply(this,[name, firstname, age, specialty, experience, salary, gender, place]); 
         var type = value; 
 
         this.setType = function (value) {
@@ -61,4 +60,4 @@ function Working(name, firstname, age, specialty, experience, salary, gender, pl
                         type: this.getType()              
                    };
         }
-     }
+    }
