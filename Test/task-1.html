@@ -1,0 +1,133 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test document</title>    
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+     <link rel="stylesheet" href="css/style.css">
+     <script src="js/task-1.js" defer></script>
+</head>
+<body>
+    <body>
+        <div class="card-header" id="headingOne">
+            <button id="buttonCreate">Create </button>
+            <button id="buttonUpdate">Update </button>
+            <button id="buttonDelete">Delete </button>
+            <button id="buttonView">View Data </button>
+            <button id="buttonPrepare">Prepare for Send </button>
+        </div>
+
+        <div class="tableClass" id="tableView" style="display: none;">
+            <table id="tableData">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Species</th>
+                        <th>Class</th>
+                        <th>Application</th>
+                        <th>Discoverer</th>
+                        <th>Age</th>
+                        <th>Place of growth</th>
+                        <th>Hazard class</th>                     
+                        <th>Inflorescence class</th>
+                        <th>Habitat</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                </table>
+        </div>
+
+        <div class="overlayEdit" id="editForm" style="display: none;">
+            <div class="login-wrapper">
+                <div class="login-content">
+                    <a class="closeEdit">x</a>  
+                    <h3 id="editLabel"></h3>
+                    <form id="formEdit" name="formEdit">
+                        <label for="name">
+                            Name: 
+                            <select name="nameArray" id="nameArray">
+                            </select><br><br>
+                            <button  id="buttonSubmitEdit" type="submit">Submit</button>
+                            <button  id="buttonCancelEdit">Cancel</button>
+                        </label>
+                    </form>
+                </div>
+            </div>   
+        </div>
+    
+    <div class="test"></div>
+    <p>Here's some content.</p>
+    <div class="overlay" style="display: none;" id="fernForm" >
+        <div class="login-wrapper">
+            <div class="login-content" id="loginTarget">
+                <a class="close">x</a>
+                <h3>Enter plant</h3>
+                <form id="formPlant" name="formPlant">
+                    <input type="radio" id="fernRB" name="group1" checked>Fern<a>
+                    <input type="radio" id="spruceRB" name="group1">Spruce
+                    <label for="Name:">
+                        Name:
+                        <input type="text" id="username" />
+                    </label>
+                    <label for="description">
+                        Description:
+                        <input type="text" id="description"/>
+                    </label>
+                    <label for="species">
+                        Species:
+                        <input type="text" id="species"/>
+                    </label>
+                    <label for="plant_class">
+                        Class:
+                        <input type="text" id="plant_class"/>
+                    </label>
+                    <label for="application">
+                        Application:
+                        <select id="application">
+                            <option>Food industry</option>
+                            <option>Preparation of drugs</option>
+                            <option>Agriculture</option>
+                          </select>
+                    </label>
+                    <label for="discoverer">
+                        Discoverer:
+                        <input type="text" id="discoverer"/>
+                    </label>
+                    <div id="fernFields">
+                        <label for="age" >
+                            Age:
+                            <input type="number" id="age"/>
+                        </label>
+                        <label for="place_of_growth" >
+                            Place of growth:
+                            <input type="text" id="place_of_growth"/>
+                        </label>
+                    </div>
+                    <div id="spruceFields">
+                        <label for="hazard_class" >
+                            Hazard class:
+                            <input type="text" id="hazard_class"/>
+                        </label>
+                        <label for="inflorescence_class" >
+                            Inflorescence class:
+                            <input type="text" id="inflorescence_class"/>
+                        </label>
+                        <label for="habitat" >
+                            Habitat:
+                            <input type="text" id="habitat"/>
+                        </label>
+                    </div>
+                    
+                    <button  id="buttonSubmit" type="submit">Submit</button>
+                    <button  id="buttonCancel">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
