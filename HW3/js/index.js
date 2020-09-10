@@ -1,18 +1,18 @@
 function Working(name, firstname, age, specialty, experience, salary, gender, place,position) {
     var name = name;
-    var firstname = firstname;
+   /* var firstname = firstname;
     var age = age;
     var specialty = specialty;
     var experience = experience;
     var salary = salary;
     var gender = gender;
     var place = place;
-    var position = position;
+    var position = position;*/
 
     this.setName = function (value) {
         name = value;
     }
-    this.setFirstName = function (value) {
+   /* this.setFirstName = function (value) {
         firstname = value;
     }
     this.setAge = function (value) {
@@ -35,29 +35,54 @@ function Working(name, firstname, age, specialty, experience, salary, gender, pl
     }
     this.setPosition = function (value) {
         position = value;
-    }
+    }*/
 } 
-    function WorkTransport (name, firstname, age, specialty, experience, salary, gender, place, type)
+    function WorkTransport (name/*, firstname, age, specialty, experience, salary, gender, place, type*/)
      {  
-        Working.apply(this,[name, firstname, age, specialty, experience, salary, gender, place]); 
+        Working.apply(this,[name/*, firstname, age, specialty, experience, salary, gender, place*/]); 
         var type = value; 
 
-        this.setType = function (value) {
+        /*this.setType = function (value) {
 
             type = value;
-        }
+        }*/
 
         this.getObj = function () {
             return { 
                         name: this.getName(),
-                        firstname: this.getFirstname(),
+                       /* firstname: this.getFirstname(),
                         age: this.getAge(),
                         specialty: this.getSpecialty(),
                         experience : this.getExperience (),
                         salary: this.getSalary(),
                         gender: this.getGender(),
                         place: this.getPlace(),
-                        type: this.getType()              
+                        type: this.getType()   */           
                    };
         }
     }
+    
+    function WorkFactory (name/*, firstname, age, specialty, experience, salary, gender, place, position*/)
+    {  
+       Working.apply(this,[name/*, firstname, age, specialty, experience, salary, gender, place*/]); 
+       var position = value; 
+
+       /*this.setType = function (value) {
+
+        position = value;
+       }*/
+
+       this.getObj = function () {
+           return { 
+                       name: this.getName(),
+                       /*firstname: this.getFirstname(),
+                       age: this.getAge(),
+                       specialty: this.getSpecialty(),
+                       experience : this.getExperience (),
+                       salary: this.getSalary(),
+                       gender: this.getGender(),
+                       place: this.getPlace(),
+                       position: this.getPosition()     */         
+                  };
+       }
+   }

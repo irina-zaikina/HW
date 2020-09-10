@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>HW4-V6</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='js/index.js'></script>
+    <script src='js/task.js'></script>    
     <link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet">
    
 </head>
@@ -16,10 +16,10 @@
             <h1>Working -V6</h1>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="class">Class</label>
-                    <select class="form-control" id="class" name="class">
-                        <option>factory worker</option>
-                        <option>transport enterprises work</option>
+                    <label for="typeclass">Class</label>
+                    <select class="form-control" id="typeclass" name="typeclass">
+                        <option>WorkFactory</option>
+                        <option>WorkTransport</option>
                     </select> 
                  </div>
                 <div class="form-group col-md-6">
@@ -42,7 +42,7 @@
                 </div>
             </div>
              <!--gender-->
-             <fieldset class="form-group">
+             <br class="form-group">
                 <div class="row">
                 <legend class="col-form-label col-md-6">Gender</legend>
                     <div class="col-sm-10">
@@ -92,7 +92,7 @@
                 <div class="d-flex justify-content-start">
                     <button type="submit" id="add" name="add" class="btn btn-primary">Add</button>
                 </div>
-        
+            </br>
         </form>  
 
         <form  id="tableForm" action="#" method="GET">
@@ -101,14 +101,14 @@
             <thead>
                 <tr>
                     <th scope="col">Name</th>
-                    <th scope="col">Firstname</th>
+                   <!--<th scope="col">Firstname</th>
                     <th scope="col">Gender</th>
                     <th scope="col">Age</th>
                     <th scope="col">Specialty</th>
                     <th scope="col">Experience</th>
                     <th scope="col">Salary</th>
                     <th scope="col">Place of work</th>
-                    <th scope="col">Position</th>                   
+                    <th scope="col">Position</th>      -->         
                 </tr>
             </thead>
             <tbody>
