@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -22,7 +22,7 @@
                         <option>WorkTransport</option>
                     </select> 
                  </div>
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6" id="typet">
                     <label for="type">Type</label>
                     <select class="form-control" id="type" name="type">
                         <option>railway</option>
@@ -30,10 +30,11 @@
                         <option>bus service</option>                
                     </select> 
                 </div> 
-            
+            </div>
+                <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="Name">Name</label>
-                    <input type="text" name="Name" id="name" class="form-control" placeholder="*">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="*">
                 </div>
 
                 <div class="form-group col-md-6">
@@ -47,8 +48,8 @@
                 <legend class="col-form-label col-md-6">Gender</legend>
                     <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                        <label class="form-check-label" for="gridRadios1">
+                        <input class="form-check-input" type="radio" name="gender" id="gender" value="option1" checked>
+                        <label class="form-check-label" for="gender">
                         Man
                         </label>
                     </div>
@@ -64,7 +65,7 @@
                 <div class="form-row">         
                 <div class="form-group col-md-6">
                     <label for="age">Age</label>
-                    <input type="text" name="age" id="age" class="form-control" placeholder="*">
+                    <input type="number" name="age" id="age" class="form-control" placeholder="*">
                 </div>
         
                 <div class="form-group col-md-6">
@@ -84,7 +85,7 @@
                     <input type="text" name="place" id="place" class="form-control" placeholder="">
                 </div>
 
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-6" id='positiont'>
                     <label for="position">Position</label>
                     <input type="text" name="position" id="position" class="form-control" placeholder="">
                 </div>
@@ -101,14 +102,12 @@
             <thead>
                 <tr>
                     <th scope="col">Name</th>
-                   <!--<th scope="col">Firstname</th>
-                    <th scope="col">Gender</th>
+                    <th scope="col">Firstname</th>
+                  <!-- <th scope="col">Gender</th>  -->  
                     <th scope="col">Age</th>
                     <th scope="col">Specialty</th>
                     <th scope="col">Experience</th>
-                    <th scope="col">Salary</th>
-                    <th scope="col">Place of work</th>
-                    <th scope="col">Position</th>      -->         
+                    <th scope="col">Salary</th>     
                 </tr>
             </thead>
             <tbody>
