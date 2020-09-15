@@ -1,119 +1,118 @@
-function Working(name, firstname, age, specialty, experience, salary, /*gender,*/ place) {
+function Working(name, firstname, age, specialty, experience, salary, place) {
     var name = name;
     var firstname = firstname;
     var age = age;
     var specialty = specialty;
     var experience = experience;
     var salary = salary;
-   /* var gender = gender;*/
     var place = place;
+}
+Working.prototype.setName = function (value){
+    this.name = value;
+}
+Working.prototype.getName = function(){
+    return this.name;
+}
 
-    this.setName = function (value) {
-        name = value;
-    }
-    this.getName = function () {
-        return name;
-    }
-   this.setFirstname = function (value) {
-        firstname = value;
-    }
-    this.getFirstname = function () {
-        return firstname;
-    }
+Working.prototype.setFirstname = function (value){
+    this.firstname = value;
+}
+Working.prototype.getFirstname = function(){
+    return this.firstname;
+}
 
-    this.setAge = function (value) {
-        age = value;
-    }
-    this.getAge = function () {
-        return age;
-    }
+Working.prototype.setAge = function (value){
+    this.age = value;
+}
+Working.prototype.getAge = function(){
+    return this.age;
+}
+Working.prototype.setSpecialty = function (value){
+    this.specialty = value;
+}
+Working.prototype.getSpecialty = function(){
+    return this.specialty;
+}
+Working.prototype.setExperience = function (value){
+    this.experience = value;
+}
+Working.prototype.getExperience = function(){
+    return this.experience;
+}
+Working.prototype.setSalary= function (value){
+    this.salary = value;
+}
+Working.prototype.getSalary = function(){
+    return this.salary;
+}
 
-    this.setSpecialty = function (value) {
-        specialty = value;
-    }
-    this.getSpecialty = function () {
-        return specialty;
-    }
-    
-    this.setExperience = function (value) {
-        experience = value;
-    }
-    this.getExperience = function () {
-        return experience;
-    }
-    this.setSalary = function (value) {
-        salary = value;
-    }
-    this.getSalary = function () {
-        return salary;
-    }
-    /*this.setGender = function (value) {
-        gender = value;
-    }
-    this.getGender = function () {
-        return gender;
-    }*/
-    this.setPlace = function (value) {
-        place = value;
-    }
-    this.getPlace = function () {
-        return place;
-    }
+Working.prototype.setPlace= function (value){
+    this.place = value;
+}
+Working.prototype.getPlace = function(){
+    return this.place;
+}
 
-} 
-    function WorkTransport (name, firstname, age, specialty, experience, salary, /*gender,*/ place, type)
-     {  
-        Working.apply(this,[name, firstname, age, specialty, experience, salary, /*gender,*/ place]); 
-        var type = type; 
+function WorkTransport (name, firstname, age, specialty, experience, salary, place, type)
+{  
+    Working.apply(this,arguments); 
+    var type = type; 
+}
 
-        this.setType = function (value) {
+WorkTransport.prototype = Object.create(Working.prototype);
+WorkTransport.prototype.constructor = WorkTransport;
 
-            type = value;
-        }
-        this.getType = function () {
-            return type;
-        }
-
-        this.getObj = function () {
-            return { 
-                        name: this.getName(),
-                        firstname: this.getFirstname(),
-                        age: this.getAge(),
-                        specialty: this.getSpecialty(),
-                        experience : this.getExperience (),
-                        salary: this.getSalary(),
-                        /*gender: this.getGender(),*/
-                        place: this.getPlace(),
-                        type: this.getType()           
-                   };
-        }
+WorkTransport.prototype.setType = function(value){
+    if (value <= 0){
+        throw new Error ("Error");
     }
-    
-    function WorkFactory (name, firstname, age, specialty, experience, salary,/* gender,*/ place)
+    this.type = value;
+}
+WorkTransport.prototype.getType = function(){
+    return this.type = value;
+}
+WorkTransport.prototype.getObj = function(){
+    return { 
+        name: this.getName(),
+        firstname: this.getFirstname(),
+        age: this.getAge(),
+        specialty: this.getSpecialty(),
+        experience : this.getExperience (),
+        salary: this.getSalary(),
+        place: this.getPlace(),
+        type: this.getType()           
+   };
+
+}
+   
+    function WorkFactory (name, firstname, age, specialty, experience, salary, place)
     {  
-       Working.apply(this,[name, firstname, age, specialty, experience, salary,/* gender,*/ place]); 
+       Working.apply(this, arguments); 
        var position = position; 
+    }    
+    WorkFactory.prototype = Object.create(Working.prototype);
+    WorkFactory.prototype.constructor = WorkFactory;
 
-       this.setPosition = function (value) {
+    WorkFactory.prototype.setPosition = function (value){
+        if (value <= 0){
+            throw new Error ("Error");
+        }
+        this.position = value;
+    }
+    WorkFactory.prototype.getPosition = function (){
+        return this.position;
+    }
 
-        position = value;
-       }
-       this.getPosition = function () {
-        return position;
-       }
+    WorkFactory.prototype.getObj = function (){
+        return{
+            name: this.getName(),
+            firstname: this.getFirstname(),
+            age: this.getAge(),
+            specialty: this.getSpecialty(),
+            experience : this.getExperience (),
+            salary: this.getSalary(),
+            place: this.getPlace(),
+            position: this.getPosition()   
+        };
+    }
 
-
-       this.getObj = function () {
-           return { 
-                       name: this.getName(),
-                       firstname: this.getFirstname(),
-                       age: this.getAge(),
-                       specialty: this.getSpecialty(),
-                       experience : this.getExperience (),
-                       salary: this.getSalary(),
-                     /*  gender: this.getGender(),*/ 
-                       place: this.getPlace(),
-                       position: this.getPosition()             
-                  };
-       }
-   }
