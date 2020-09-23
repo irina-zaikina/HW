@@ -39,10 +39,16 @@
                   obj.setPlace(element.value);
                 break;  */
                 case 'position':
+                if(elements[0].value === 'WorkFactory')
+                {                 
                   obj.setPosition(element.value);
+                }
                 break;  
                 case 'type':
+                if(elements[0].value === 'WorkTransport')
+                {
                   obj.setType(element.value);
+                }
                 break; 
 
           }
